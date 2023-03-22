@@ -3,11 +3,16 @@ import './App.css';
 import React, { Fragment } from 'react';
 
 function App(){
-  const name = undefined;
-  //return name ; //안나옴
-  // return name || '값이 undefined입니다요' //후자 값 나옴
-  // return <div>{name}</div>; //안나옴
-  return <div>{name || '리액트'}</div>; //후자 값 나옴
+  const name = '리액트';
+  const style1 = {
+    //background-color는 backgroundColor와 값이 -가 사라지고 카멜 표기법으로 작성
+    backgroundColor : 'black',
+    color : 'aqua',
+    fontSize : '48px', //font-size --> fontSize
+    fontWeight : 'bold',
+    padding : 16 //단위를 생략하면 px로 지정됨
+  };
+  return <div style={style1}>{name}</div>
 }
 
 export default App;
